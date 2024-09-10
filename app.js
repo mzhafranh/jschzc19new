@@ -38,7 +38,7 @@ app.get('/add', (req, res) => {
 
 app.post('/add', (req, res) => {
 
-    data.push({name: req.body.name, height: parseInt(req.body.height), weight: parseFloat(req.body.weight), birthdate: req.body.birthdate, married: req.body.married})
+    data.push({name: req.body.name, height: parseInt(req.body.height), weight: parseFloat(req.body.weight), birthdate: req.body.birthdate, married: JSON.parse(req.body.married)})
     saveList(data);
     res.redirect('/');
 })

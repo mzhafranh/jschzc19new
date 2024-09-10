@@ -41,7 +41,7 @@ h1{
     color: #fff;
     background-color: #04A96D;
     border: none;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     margin-top: 5px;
     margin-bottom: 5px;
     box-sizing: border-box;
@@ -64,6 +64,27 @@ h1{
     box-sizing: border-box;
 }
 
+.buttondel {
+    background: none;
+    border: none;
+    color: #0000EE;            
+    text-decoration: underline; 
+    cursor: pointer;   
+    font: inherit;         
+}
+
+.buttondel:visited {
+    color: #551A8B; 
+}
+
+.buttondel:hover {
+    text-decoration: underline;
+}
+
+.buttondel:active {
+    color: #FF0000; 
+}
+
 
 .container-edit{
     width: 100%;
@@ -72,7 +93,35 @@ h1{
     border: 2px solid #F1F1F1;
 }
 
-.column-edit{
+input[type=text].column-edit{
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    text-indent: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    border: 2px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type=date].column-edit{
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    text-indent: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    border: 2px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+select.column-edit{
     display: inline-block;
     padding: 10px 0 10px 0;
     text-indent: 20px;

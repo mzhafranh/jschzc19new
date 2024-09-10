@@ -34,8 +34,7 @@
                     <td><%= item.married ? 'Yes' : 'Not yet' %></td>
                     <td>
                         <a href="/edit/<%= index %>" class="buttonedit">Update</a>
-                        
-                        <a href="/delete/<%= index %>" class="buttondel">Delete</a>
+                        <button onclick="userConfirm('<%= item.name %>',<%= index %>)" class="buttondel">Delete</button>
                     </td>
                 </tr>
                 <% }) %>
@@ -43,5 +42,13 @@
         </table>
         <br>
     </div>
+    <script>
+        function userConfirm(name,index){
+            const userConfirmed = confirm(`Apakah yakin akan menghapus data ${name}?`);
+            if (userConfirmed) {
+                window.location.href = `/delete/${index}`
+            }
+        }
+    </script>
 </body>
 </html>

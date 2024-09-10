@@ -20,10 +20,10 @@
                
                     <input type="date" class="column-edit" name="birthdate" value = "<%= item.birthdate %>">
           
-                    <select id="boolean" class="column-edit", name="boolean">
+                    <select id="married" class="column-edit", name="married">
                         <option value="">have you married?</option>
-                        <option value="true" <%= item.married === "true" ? 'selected' : '' %>>true</option>
-                        <option value="false" <%= item.married === "false" ? 'selected' : '' %>>false</option>
+                        <option value="true" <%= item.married === true ? 'selected' : '' %>>true</option>
+                        <option value="false" <%= item.married === false ? 'selected' : '' %>>false</option>
                     </select>
 
                     <br>
