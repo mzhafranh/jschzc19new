@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>CRUD(Create, Read, Update, Delete)</title>
+</head>
+<body>
+    <h1>JSON CRUD(Create, Read, Update, Delete)</h1>
+    <div class="container">
+        <a href="/add" class="button-add">Tambah</a>
+        <table style="width: 100%" border="1" id = "daftar">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Birth Date</th>
+                    <th>Is Married</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% rows.forEach((item, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= item.name %></td>
+                    <td><%= item.height %></td>
+                    <td><%= item.weight %></td>
+                    <td><%= item.birthdate %></td>
+                    <td><%= item.married ? 'Yes' : 'Not yet' %></td>
+                    <td>
+                        <a href="/edit/<%= index %>" class="buttonedit">Update</a>
+                        
+                        <a href="/delete/<%= index %>" class="buttondel">Delete</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <br>
+    </div>
+</body>
+</html>
